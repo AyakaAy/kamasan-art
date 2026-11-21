@@ -1,0 +1,336 @@
+/* resources/css/pages/admin-login.css */
+:root {
+    --ka-bg-dark: #171513;
+    --ka-surface: #1f1c19;
+    --ka-surface-input: #13110f;
+    --ka-gold: #DDB96F;
+    --ka-gold-hover: #c9a356;
+    --ka-text-primary: #D5CCBF;
+    --ka-text-muted: #A69A84;
+    --ka-border: rgba(221, 185, 111, 0.18);
+    --ka-border-focus: rgba(221, 185, 111, 0.65);
+    --ka-danger: #e06c6c;
+}
+
+.admin-login-wrapper,
+.admin-login-wrapper * {
+    box-sizing: border-box;
+}
+
+.admin-login-wrapper {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    background-color: var(--ka-bg-dark);
+    color: var(--ka-text-primary);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Sisi Kiri: Visual Artwork Sutasoma */
+.admin-visual-pane {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem 3.5rem;
+    overflow: hidden;
+    border-right: 1px solid var(--ka-border);
+}
+
+.admin-visual-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+.admin-visual-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 30% 40%, rgba(23, 21, 19, 0.35) 0%, rgba(23, 21, 19, 0.88) 100%),
+        linear-gradient(180deg, rgba(23, 21, 19, 0.75) 0%, rgba(23, 21, 19, 0.4) 45%, rgba(23, 21, 19, 0.94) 100%);
+    z-index: 1;
+}
+
+.admin-visual-top,
+.admin-visual-bottom {
+    position: relative;
+    z-index: 2;
+}
+
+.admin-visual-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.45rem 1rem;
+    background: rgba(23, 21, 19, 0.72);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--ka-border);
+    border-radius: 999px;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ka-gold);
+}
+
+.back-public-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.85rem;
+    color: var(--ka-text-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.back-public-link:hover {
+    color: var(--ka-gold);
+}
+
+.visual-kicker {
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ka-gold);
+    margin-bottom: 0.75rem;
+}
+
+.visual-heading {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.1rem, 3.2vw, 3rem);
+    font-weight: 600;
+    line-height: 1.15;
+    color: #F4EFE6;
+    margin-bottom: 1rem;
+    max-width: 28rem;
+}
+
+.visual-desc {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: var(--ka-text-muted);
+    max-width: 30rem;
+    margin-bottom: 2rem;
+}
+
+.studio-meta-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(213, 204, 191, 0.15);
+    font-size: 0.78rem;
+    color: var(--ka-text-muted);
+}
+
+/* Sisi Kanan: Form Login */
+.admin-form-pane {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 4rem;
+    background-color: var(--ka-bg-dark);
+}
+
+.form-container {
+    width: 100%;
+    max-width: 410px;
+    margin: 0 auto;
+}
+
+.form-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ka-gold);
+    margin-bottom: 0.5rem;
+}
+
+.form-title {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    font-size: 2.15rem;
+    font-weight: 600;
+    color: #F4EFE6;
+    margin-bottom: 0.5rem;
+}
+
+.form-subtitle {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: var(--ka-text-muted);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.35rem;
+}
+
+.form-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.form-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ka-text-primary);
+}
+
+.form-required-tag {
+    font-size: 0.7rem;
+    color: var(--ka-text-muted);
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    color: var(--ka-text-muted);
+    pointer-events: none;
+    display: flex;
+}
+
+.form-control-ka {
+    width: 100%;
+    padding: 0.85rem 2.75rem;
+    background-color: var(--ka-surface-input);
+    border: 1px solid var(--ka-border);
+    border-radius: 6px;
+    color: #F4EFE6;
+    font-size: 0.92rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control-ka::placeholder {
+    color: rgba(166, 154, 132, 0.45);
+}
+
+.form-control-ka:focus {
+    outline: none;
+    border-color: var(--ka-border-focus);
+    box-shadow: 0 0 0 3px rgba(221, 185, 111, 0.12);
+}
+
+.toggle-password-btn {
+    position: absolute;
+    right: 0.85rem;
+    background: none;
+    border: none;
+    color: var(--ka-text-muted);
+    cursor: pointer;
+    padding: 0.25rem;
+    display: flex;
+    transition: color 0.2s ease;
+}
+
+.toggle-password-btn:hover {
+    color: var(--ka-gold);
+}
+
+.error-message {
+    display: block;
+    margin-top: 0.45rem;
+    font-size: 0.8rem;
+    color: var(--ka-danger);
+}
+
+.remember-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.75rem;
+    font-size: 0.85rem;
+    color: var(--ka-text-muted);
+    cursor: pointer;
+}
+
+.remember-row input[type="checkbox"] {
+    accent-color: var(--ka-gold);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.btn-submit-ka {
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+    background-color: var(--ka-gold);
+    color: #171513;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-submit-ka:hover {
+    background-color: var(--ka-gold-hover);
+}
+
+.btn-submit-ka:active {
+    transform: translateY(1px);
+}
+
+.security-notice-box {
+    margin-top: 2rem;
+    padding: 1rem 1.15rem;
+    background-color: var(--ka-surface);
+    border: 1px solid var(--ka-border);
+    border-left: 3px solid var(--ka-gold);
+    border-radius: 6px;
+    font-size: 0.8rem;
+    line-height: 1.55;
+    color: var(--ka-text-muted);
+}
+
+.security-notice-box strong {
+    color: var(--ka-text-primary);
+}
+
+/* Responsif Tablet & Mobile */
+@media (max-width: 960px) {
+    .admin-login-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-visual-pane {
+        min-height: 290px;
+        padding: 2rem 1.75rem;
+        border-right: none;
+        border-bottom: 1px solid var(--ka-border);
+    }
+
+    .visual-desc {
+        display: none;
+    }
+
+    .admin-form-pane {
+        padding: 2.5rem 1.75rem;
+    }
+}
