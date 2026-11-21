@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'brand' => 'KAMASAN ART',
+    'brand' => 'MADE KAMASAN',
 
     'tagline' => 'Preserving the Heritage of Kamasan Painting',
 
@@ -11,4 +11,13 @@ return [
     ],
 
     'address' => 'Jl. Pande Mas, Klungkung, Bali',
+    
+    'navigation' => [
+        ['label' => 'Beranda', 'url' => '/'],
+        ['label' => 'Tentang Kami', 'url' => '/tentang'],
+        ['label' => 'Katalog Mahakarya', 'url' => '/katalog'],
+        ['label' => 'Galeri & Pameran', 'url' => '/galeri'],
+        ['label' => 'Lacak Pesanan', 'url' => '/lacak-pesanan'],
+        ['label' => 'Kontak Atelier', 'url' => '/kontak'],
+    ],
 ];

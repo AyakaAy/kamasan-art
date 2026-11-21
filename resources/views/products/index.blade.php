@@ -17,6 +17,7 @@
     @vite(['resources/css/products/kamasan-products.css'])
 </head>
 <body class="kamasan-body">
+    
     <main class="container py-5" style="max-width: 1280px;">
         <header class="text-center mx-auto mb-5" style="max-width: 720px;">
             <div class="kamasan-eyebrow text-uppercase mb-2">
@@ -100,6 +101,8 @@
         </section>
     </main>
 
+    @include('layouts.footer')
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
@@ -180,5 +183,6 @@
             }
         })();
     </script>
+    
 </body>
 </html>

@@ -1,0 +1,238 @@
+.kamasan-footer {
+    background-color: #0F0E0C;
+    color: #EAE5D9;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 72px 24px 40px;
+}
+
+.kamasan-footer * {
+    box-sizing: border-box;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr 1.1fr;
+    gap: 48px;
+    padding-bottom: 64px;
+}
+
+.footer-heading-gold {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #D4AF37;
+    margin: 0 0 18px 0;
+}
+
+/* Kolom 1: Brand & Kontak */
+.brand-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
+}
+
+.brand-logo-box {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #191713;
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.brand-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.brand-title {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    color: #E5C158;
+    margin: 0;
+}
+
+.brand-description {
+    font-size: 14px;
+    line-height: 1.75;
+    color: #D6D1C7;
+    max-width: 410px;
+    margin: 0 0 32px 0;
+}
+
+.contact-block .footer-heading-gold {
+    margin-bottom: 10px;
+}
+
+.wa-link {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    color: #EAE5D9;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.wa-link:hover {
+    color: #E5C158;
+}
+
+.ig-wrapper {
+    margin-top: 6px;
+}
+
+.ig-link {
+    font-size: 13px;
+    color: #9A958C;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.ig-link:hover {
+    color: #D4AF37;
+}
+
+/* Kolom 2: Navigasi Cepat */
+.footer-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-nav-list a {
+    font-size: 14.5px;
+    color: #D6D1C7;
+    text-decoration: none;
+    transition: color 0.25s ease, padding-left 0.25s ease;
+}
+
+.footer-nav-list a:hover,
+.footer-nav-list a.active {
+    color: #E5C158;
+    padding-left: 4px;
+}
+
+/* Kolom 3: Atelier & Jam Buka */
+.studio-section {
+    margin-bottom: 32px;
+}
+
+.studio-address {
+    font-size: 15px;
+    font-weight: 500;
+    color: #EAE5D9;
+    margin: 0 0 10px 0;
+}
+
+.studio-subtext {
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: #9A958C;
+    margin: 0;
+}
+
+.hours-section .footer-heading-gold {
+    margin-bottom: 12px;
+}
+
+.hours-text {
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: #C7C2B8;
+    margin: 0;
+}
+
+/* Bagian Bawah */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.copyright-text {
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: #9A958C;
+    max-width: 520px;
+    margin: 0;
+}
+
+.heritage-badges {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.badge-item {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.45;
+    color: #D6D1C7;
+    text-transform: uppercase;
+}
+
+.badge-dot {
+    color: #D4AF37;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-col-brand {
+        grid-column: span 2;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .kamasan-footer {
+        padding: 52px 20px 32px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        padding-bottom: 44px;
+    }
+
+    .footer-col-brand {
+        grid-column: span 1;
+    }
+
+    .heritage-badges {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+}
