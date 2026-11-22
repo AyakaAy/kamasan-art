@@ -38,7 +38,6 @@ Tujuan pengembangan KAMASAN ART:
 | Landing Page | Halaman utama yang memperkenalkan KAMASAN ART. |
 | About | Informasi mengenai studio dan seni Wayang Kamasan. |
 | Heritage | Informasi sejarah dan nilai budaya Wayang Kamasan. |
-| Our Collection | Menampilkan daftar produk atau karya. |
 | Product Detail | Menampilkan informasi detail setiap produk. |
 | Contact | Informasi kontak dan cara menghubungi studio. |
 
@@ -46,11 +45,11 @@ Tujuan pengembangan KAMASAN ART:
 
 Untuk tahap UTS, website dikembangkan tanpa database.
 
-- Data produk menggunakan array di Controller.
+- Data produk menggunakan array di resources/data/.
 - Data ditampilkan menggunakan Blade.
 - Tidak terdapat fitur CRUD.
 - Tidak terdapat sistem autentikasi.
-- Pemesanan dapat diarahkan melalui WhatsApp apabila mekanisme pemesanan studio sudah tersedia.
+- Pemesanan dapat melalui form apabila mekanisme pemesanan studio sudah tersedia.
 
 Pengembangan database dan fitur CRUD dapat dipertimbangkan pada tahap berikutnya sesuai kebutuhan UAS.
 
@@ -60,199 +59,28 @@ Pembagian tanggung jawab awal kelompok:
 
 | Anggota | Peran | Tanggung Jawab |
 |---|---|---|
-| Anggota 1 | Laravel & Integration | Routing, Controller, integrasi dan pengembangan Laravel. |
-| Anggota 2 | UI/UX & Frontend | Wireframe, desain antarmuka dan landing page. |
-| Anggota 3 | Frontend Developer | Katalog produk, detail produk dan responsive design. |
-| Anggota 4 | Content & Documentation | Pengumpulan informasi UMKM, aset gambar, dokumentasi dan belajar Blade. |
+| Anggota 1 | Laravel & Integration | - Mengatur routing dan Controller.
+- Menyiapkan struktur data dan integrasi Laravel.
+- Menghubungkan data dengan halaman Blade.
+- Mengelola struktur Git dan branch.
+- Melakukan code review, merge Pull Request, dan integrasi keseluruhan proyek. |
+| Anggota 2 | UI/UX & Frontend | - Membuat wireframe dan desain antarmuka website.
+- Menentukan konsep visual, warna, tipografi, dan komponen UI.
+- Mengimplementasikan halaman Home / Landing Page.
+- Memastikan konsistensi desain ant halaman. |
+| Anggota 3 | Frontend Developer | - Mengimplementasikan halaman katalog produk.
+- Membuat komponen kartu produk.
+- Mengimplementasikan halaman detail produk.
+- Mengatur responsive design untuk halaman produk. |
+| Anggota 4 | Content & Asset Manager | - Mengumpulkan dan melengkapi informasi UMKM.
+- Mengelola foto dan aset gambar website.
+- Menyiapkan data serta deskripsi produk.
+- Menyusun konten profil dan informasi studio.
+- Mengelola dokumentasi proyek. |
+| Anggota 5 |  Frontend Developer  | - Mengimplementasikan halaman About Us.
+- Mengimplementasikan halaman Contact.
+- Membuat komponen Blade pendukung sesuai kebutuhan.
+- Membantu pengujian tampilan dan fungsionalitas website.
+- Memastikan halaman responsif dan konsisten dengan desain. |
 
 **Catatan:** Pembagian ini bersifat sementara dan dapat disesuaikan berdasarkan perkembangan kemampuan masing-masing anggota.
-
-Setiap anggota tetap diharapkan memahami dasar Laravel, khususnya Routing, Controller, Blade, dan alur pengiriman data.
-
-## 5. Technology Stack
-
-Teknologi yang digunakan dalam proyek:
-
-- **Laravel:** Backend framework.
-- **PHP:** Bahasa pemrograman utama.
-- **Blade:** Template engine Laravel.
-- **Tailwind CSS:** Styling dan pengembangan antarmuka.
-- **JavaScript:** Interaksi pada halaman website.
-- **Git:** Version control.
-- **GitHub:** Kolaborasi dan penyimpanan source code.
-
-## 6. Project Structure
-
-Struktur direktori yang direncanakan:
-
-```text
-app/
-└── Http/
-    └── Controllers/
-        ├── HomeController.php
-        ├── ProductController.php
-        └── ContactController.php
-
-resources/
-└── views/
-    ├── layouts/
-    │   └── app.blade.php
-    ├── components/
-    │   ├── navbar.blade.php
-    │   └── footer.blade.php
-    ├── products/
-    │   ├── index.blade.php
-    │   └── detail.blade.php
-    ├── home.blade.php
-    └── contact.blade.php
-
-routes/
-└── web.php
-
-public/
-└── images/
-    ├── hero/
-    ├── products/
-    ├── gallery/
-    ├── studio/
-    └── heritage/
-```
-
-Struktur tersebut merupakan rancangan awal dan dapat berubah mengikuti kebutuhan pengembangan.
-
-## 7. Development Workflow
-
-Tahapan pengembangan proyek:
-
-1. Planning dan analisis kebutuhan.
-2. Observasi studio dan pengumpulan informasi.
-3. Pengumpulan foto serta aset visual.
-4. Pembuatan wireframe dan desain UI/UX.
-5. Persiapan project Laravel.
-6. Pengembangan halaman menggunakan Blade dan Tailwind CSS.
-7. Integrasi Routing, Controller, dan data.
-8. Testing dan debugging.
-9. Evaluasi serta persiapan presentasi.
-
-## 8. Git & GitHub Workflow
-
-Branch yang digunakan:
-
-```text
-main
-└── develop
-    ├── feature/landing-page
-    ├── feature/product-catalog
-    ├── feature/product-detail
-    └── feature/contact
-```
-
-Ketentuan kolaborasi:
-
-- `main` digunakan untuk versi proyek yang stabil.
-- `develop` digunakan untuk integrasi pekerjaan.
-- Setiap anggota mengembangkan fitur melalui branch masing-masing.
-- Perubahan digabungkan melalui Pull Request.
-- Hindari mengubah file yang sama secara bersamaan tanpa koordinasi.
-- Lakukan commit secara berkala dengan pesan yang jelas.
-
-Contoh commit:
-
-```bash
-git add .
-git commit -m "feat: create landing page"
-git push origin feature/landing-page
-```
-
-## 9. Installation & Setup
-
-### Requirements
-
-Pastikan perangkat sudah memiliki:
-
-- PHP
-- Composer
-- Node.js dan npm
-- Git
-
-### Installation
-
-Clone repository:
-
-```bash
-git clone <REPOSITORY_URL>
-```
-
-Masuk ke direktori proyek:
-
-```bash
-cd KAMASAN-ART
-```
-
-Install dependency PHP:
-
-```bash
-composer install
-```
-
-Install dependency frontend:
-
-```bash
-npm install
-```
-
-Buat file environment:
-
-```bash
-cp .env.example .env
-```
-
-Generate application key:
-
-```bash
-php artisan key:generate
-```
-
-Jalankan development server:
-
-```bash
-php artisan serve
-```
-
-Jalankan Vite untuk frontend:
-
-```bash
-npm run dev
-```
-
-Buka website melalui:
-
-```text
-http://127.0.0.1:8000
-```
-
-## 10. Project Status
-
-Status pengerjaan saat ini:
-
-- [ ] Planning dan pembagian tugas.
-- [ ] Observasi dan pengumpulan informasi studio.
-- [ ] Pengumpulan aset visual.
-- [ ] Pembuatan wireframe.
-- [ ] Laravel project setup.
-- [ ] Implementasi landing page.
-- [ ] Implementasi katalog produk.
-- [ ] Implementasi detail produk.
-- [ ] Implementasi contact page.
-- [ ] Testing dan debugging.
-- [ ] Finalisasi proyek UTS.
-
----
-
-## 11. Notes
-
-Proyek ini dikembangkan sebagai bagian dari pembelajaran Pemrograman Web Framework menggunakan Laravel.
-
-Informasi mengenai studio, sejarah, karya, dan produk akan disesuaikan berdasarkan hasil observasi serta konfirmasi dari pihak terkait.
-
-Dokumentasi ini akan diperbarui mengikuti perkembangan proyek KAMASAN ART.

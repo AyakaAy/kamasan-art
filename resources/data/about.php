@@ -10,7 +10,7 @@
         
         'owner' => [
                 'name' => 'I Ketut Sukanta',
-                'image' => 'assets/images/about/pemilik-studio.jpg',
+                'image' => 'assets/images/about/pemilik-studio.webp',
                 'description' => 'I Ketut Sukanta adalah seorang seniman dan pengrajin yang memiliki keahlian dalam seni lukis tradisional Kamasan. Dengan pengalaman bertahun-tahun, beliau telah mengembangkan karya-karya yang memadukan teknik tradisional dengan pendekatan kontemporer. Sebagai pemilik studio, I Ketut Sukanta berkomitmen untuk melestarikan warisan budaya Bali melalui seni lukis Kamasan, sambil mendorong inovasi dan kreativitas dalam setiap karyanya.',
         ],
     ];

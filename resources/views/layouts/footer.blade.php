@@ -59,7 +59,7 @@
                     <li>
                         <a href="{{ Route::has('products.index') ? route('products.index') : url('/katalog') }}"
                            class="{{ request()->routeIs('products.*') ? 'active' : '' }}">
-                            Katalog Mahakarya
+                            Katalog 
                         </a>
                     </li>
                     <li>
