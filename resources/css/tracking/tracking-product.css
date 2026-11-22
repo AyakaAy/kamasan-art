@@ -1,0 +1,683 @@
+/* ==========================================================================
+   KAMASAN ART — Halaman Tracking (resources/css/tracking/tracking-product.css)
+   ========================================================================== */
+
+.km-track-body {
+    background-color: #171513;
+    color: #d5ccbf;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.km-track-page {
+    flex: 1;
+    display: block;
+    background-color: #171513;
+    color: #d5ccbf;
+    padding: 3.5rem 1.25rem 5rem;
+}
+
+.km-track-container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/* Hero & Search */
+.km-track-hero {
+    text-align: center;
+    max-width: 780px;
+    margin: 0 auto 2.75rem;
+}
+
+.km-track-eyebrow {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    background: rgba(221, 185, 111, 0.08);
+    border: 1px solid rgba(221, 185, 111, 0.2);
+    color: #ddb96f;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.km-track-title {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.1rem, 4vw, 3.1rem);
+    font-weight: 600;
+    color: #f3ece1;
+    margin: 0 0 0.85rem;
+    line-height: 1.15;
+}
+
+.km-track-subtitle {
+    color: #a69a84;
+    font-size: 0.96rem;
+    line-height: 1.65;
+    margin: 0 auto 2rem;
+}
+
+.km-track-search-bar {
+    display: flex;
+    gap: 0.65rem;
+    background: #1f1c19;
+    border: 1px solid rgba(221, 185, 111, 0.35);
+    border-radius: 10px;
+    padding: 0.55rem;
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.45);
+}
+
+.km-track-input-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #141210;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 7px;
+    padding: 0 1rem;
+}
+
+.km-track-icon {
+    color: #ddb96f;
+}
+
+.km-track-input-wrap input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #f5efe6;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.96rem;
+    letter-spacing: 0.06em;
+    padding: 0.85rem 0;
+    outline: none;
+}
+
+.km-clear-btn {
+    color: #a69a84;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+.km-track-btn-gold {
+    background: #ddb96f;
+    color: #171513;
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    padding: 0.9rem 1.6rem;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+}
+
+.km-track-btn-gold:hover {
+    background: #e8c987;
+}
+
+.km-track-footnotes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.7rem;
+    font-size: 0.76rem;
+    color: #a69a84;
+}
+
+/* Alert & Sample Cards */
+.km-track-alert {
+    max-width: 680px;
+    margin: 0 auto 2rem;
+    padding: 1.15rem 1.4rem;
+    background: rgba(220, 82, 82, 0.12);
+    border: 1px solid rgba(220, 82, 82, 0.4);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.km-track-alert strong {
+    display: block;
+    color: #f4a4a4;
+    margin-bottom: 0.35rem;
+}
+
+.km-track-alert p {
+    margin: 0;
+    font-size: 0.88rem;
+    color: #d5ccbf;
+}
+
+.km-track-samples {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(221, 185, 111, 0.15);
+}
+
+.km-samples-head {
+    text-align: center;
+    margin-bottom: 1.6rem;
+}
+
+.km-samples-head h2 {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    font-size: 1.65rem;
+    color: #f3ece1;
+    margin: 0.35rem 0 0;
+}
+
+.km-samples-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.km-sample-card {
+    background: #1f1c19;
+    border: 1px solid rgba(221, 185, 111, 0.16);
+    border-radius: 12px;
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.km-sample-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.km-sample-top code {
+    background: #141210;
+    color: #f3ece1;
+    padding: 0.25rem 0.55rem;
+    border-radius: 5px;
+    font-size: 0.82rem;
+}
+
+.km-sample-card h3 {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    font-size: 1.3rem;
+    color: #f3ece1;
+    margin: 0;
+}
+
+.km-sample-card p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #a69a84;
+    line-height: 1.55;
+}
+
+.km-sample-link {
+    margin-top: auto;
+    color: #ddb96f;
+    font-size: 0.84rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.km-sample-link:hover {
+    text-decoration: underline;
+}
+
+/* Grids & Cards (show.blade.php) */
+.km-track-top-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.km-track-main-grid {
+    display: grid;
+    grid-template-columns: 370px minmax(0, 1fr);
+    gap: 1.25rem;
+    align-items: start;
+}
+
+.km-track-card {
+    background: #1f1c19;
+    border: 1px solid rgba(221, 185, 111, 0.16);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.km-card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.85rem;
+}
+
+.km-card-kicker {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #ddb96f;
+}
+
+.km-pill {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.28rem 0.75rem;
+    border-radius: 999px;
+}
+
+.km-pill.is-gold {
+    background: rgba(221, 185, 111, 0.14);
+    border: 1px solid rgba(221, 185, 111, 0.42);
+    color: #ddb96f;
+}
+
+.km-pill.is-green {
+    background: rgba(74, 175, 112, 0.14);
+    border: 1px solid rgba(74, 175, 112, 0.42);
+    color: #8ce0aa;
+}
+
+.km-pill.is-outline {
+    background: rgba(221, 185, 111, 0.08);
+    border: 1px solid rgba(221, 185, 111, 0.25);
+    color: #ddb96f;
+}
+
+.km-card-heading {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    font-size: 1.48rem;
+    color: #f3ece1;
+    margin: 0 0 0.65rem;
+    line-height: 1.28;
+}
+
+.km-card-body-text {
+    color: #a69a84;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.km-ledger {
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.km-ledger-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.86rem;
+    color: #a69a84;
+}
+
+.km-ledger-row strong {
+    color: #d5ccbf;
+}
+
+.km-ledger-row.is-total .km-gold-text {
+    color: #ddb96f;
+    font-size: 0.98rem;
+}
+
+.km-ledger-note {
+    margin: 0.85rem 0 0;
+    padding-top: 0.65rem;
+    border-top: 1px dashed rgba(255, 255, 255, 0.08);
+    font-size: 0.76rem;
+    color: #a69a84;
+}
+
+/* Sidebar Arsip */
+.km-archive-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.km-archive-code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 1.08rem;
+    color: #f3ece1;
+    margin: 0.25rem 0 0;
+}
+
+.km-artwork-box {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+    margin-bottom: 1.15rem;
+    border: 1px solid rgba(221, 185, 111, 0.2);
+}
+
+.km-artwork-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.km-artwork-caption {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(18, 16, 14, 0.94) 10%, rgba(18, 16, 14, 0.2) 65%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+.km-artwork-caption span {
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: #ddb96f;
+}
+
+.km-artwork-caption h3 {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0.2rem 0;
+}
+
+.km-artwork-caption p {
+    font-size: 0.75rem;
+    color: #d5ccbf;
+    margin: 0;
+}
+
+.km-spec-list {
+    margin: 0 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.km-spec-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.83rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.km-spec-item dt {
+    color: #a69a84;
+}
+
+.km-spec-item dd {
+    margin: 0;
+    text-align: right;
+    color: #d5ccbf;
+    font-weight: 500;
+}
+
+.km-privacy-note {
+    display: flex;
+    gap: 0.65rem;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    padding: 0.75rem;
+    margin-bottom: 0.85rem;
+    font-size: 0.75rem;
+    color: #a69a84;
+    line-height: 1.5;
+}
+
+.km-privacy-note p {
+    margin: 0;
+}
+
+.km-help-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    background: #26221e;
+    border: 1px solid rgba(221, 185, 111, 0.16);
+    border-radius: 8px;
+    padding: 0.85rem;
+}
+
+.km-help-box strong {
+    display: block;
+    font-size: 0.82rem;
+    color: #f3ece1;
+}
+
+.km-help-box p {
+    margin: 0.15rem 0 0;
+    font-size: 0.73rem;
+    color: #a69a84;
+}
+
+.km-help-btn {
+    background: rgba(221, 185, 111, 0.14);
+    border: 1px solid rgba(221, 185, 111, 0.4);
+    color: #ddb96f;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.55rem 0.85rem;
+    border-radius: 6px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Timeline */
+.km-timeline-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+    padding-bottom: 1.15rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.km-timeline-title {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    font-size: 1.65rem;
+    color: #f3ece1;
+    margin: 0.25rem 0 0;
+}
+
+.km-step {
+    display: flex;
+    gap: 1.1rem;
+}
+
+.km-step-rail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30px;
+    flex-shrink: 0;
+}
+
+.km-step-dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.78rem;
+    font-weight: 700;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: #171513;
+    color: #a69a84;
+}
+
+.km-step.is-completed .km-step-dot {
+    background: #ddb96f;
+    border-color: #ddb96f;
+    color: #171513;
+}
+
+.km-step.is-active .km-step-dot {
+    background: rgba(221, 185, 111, 0.18);
+    border-color: #ddb96f;
+    color: #ddb96f;
+    box-shadow: 0 0 0 4px rgba(221, 185, 111, 0.12);
+}
+
+.km-step-line {
+    width: 2px;
+    flex: 1;
+    min-height: 24px;
+    background: rgba(255, 255, 255, 0.08);
+    margin: 0.3rem 0;
+}
+
+.km-step.is-completed .km-step-line {
+    background: rgba(221, 185, 111, 0.45);
+}
+
+.km-step-body {
+    flex: 1;
+    padding-bottom: 1.5rem;
+}
+
+.km-step.is-active .km-step-body {
+    background: #26221e;
+    border: 1px solid rgba(221, 185, 111, 0.38);
+    border-radius: 10px;
+    padding: 1.1rem 1.2rem;
+    margin-bottom: 1.25rem;
+}
+
+.km-step.is-upcoming {
+    opacity: 0.52;
+}
+
+.km-step-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.35rem;
+}
+
+.km-step-header h3 {
+    font-size: 1rem;
+    color: #f3ece1;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.km-active-tag {
+    font-size: 0.65rem;
+    font-weight: 700;
+    background: #ddb96f;
+    color: #171513;
+    padding: 0.18rem 0.55rem;
+    border-radius: 4px;
+}
+
+.km-step-time {
+    font-size: 0.75rem;
+    color: #a69a84;
+    white-space: nowrap;
+}
+
+.km-step-body p {
+    margin: 0;
+    font-size: 0.88rem;
+    color: #a69a84;
+    line-height: 1.6;
+}
+
+.km-step-note {
+    margin-top: 0.65rem;
+    font-size: 0.78rem;
+    color: #ddb96f;
+}
+
+/* Guarantee Banner */
+.km-guarantee-banner {
+    margin-top: 1.5rem;
+    background: #1f1c19;
+    border: 1px solid rgba(221, 185, 111, 0.16);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.km-guarantee-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.km-seal {
+    font-size: 1.6rem;
+    color: #ddb96f;
+}
+
+.km-guarantee-left strong {
+    display: block;
+    color: #f3ece1;
+    font-size: 0.95rem;
+}
+
+.km-guarantee-left p {
+    margin: 0.2rem 0 0;
+    font-size: 0.82rem;
+    color: #a69a84;
+}
+
+.km-print-btn {
+    background: transparent;
+    border: 1px solid rgba(221, 185, 111, 0.38);
+    color: #d5ccbf;
+    padding: 0.6rem 1.1rem;
+    border-radius: 7px;
+    font-size: 0.82rem;
+    cursor: pointer;
+}
+
+.km-print-btn:hover {
+    border-color: #ddb96f;
+    color: #ddb96f;
+}
+
+@media (max-width: 960px) {
+    .km-samples-grid,
+    .km-track-top-grid,
+    .km-track-main-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .km-track-search-bar {
+        flex-direction: column;
+    }
+}

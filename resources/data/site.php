@@ -15,7 +15,7 @@ return [
     'navigation' => [
         ['label' => 'Beranda', 'url' => '/'],
         ['label' => 'Tentang Kami', 'url' => '/tentang'],
-        ['label' => 'Katalog Mahakarya', 'url' => '/katalog'],
+        ['label' => 'Katalog', 'url' => '/katalog'],
         ['label' => 'Galeri & Pameran', 'url' => '/galeri'],
         ['label' => 'Lacak Pesanan', 'url' => '/lacak-pesanan'],
         ['label' => 'Kontak Atelier', 'url' => '/kontak'],

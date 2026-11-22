@@ -18,7 +18,7 @@
         <!-- Panel Kiri: Latar Karya Wayang Kamasan (Sutasoma) -->
        <section class="admin-visual-pane">
             <img
-                src="{{ asset('assets/images/products/sutasoma.jpg') }}"
+                src="{{ asset('assets/images/products/sutasoma.webp') }}"
                 alt="Karya Wayang Kamasan Sutasoma"
                 class="admin-visual-bg">
             <div class="admin-visual-overlay"></div>

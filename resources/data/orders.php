@@ -1,0 +1,138 @@
+<?php
+
+return [
+    // CONTOH 1: READY STOCK (Langsung 100% Lunas — Skip DP 50%)
+    'KM-20261122-RS1001' => [
+        'tracking_code' => 'KM-20261122-RS1001',
+        'product_slug' => 'lukisan-bima-swarga',
+        'product_name' => 'Lukisan Klasik Bima Swarga',
+        'product_category' => 'Pajangan Dinding',
+        'product_dimensions' => '90 x 60 cm • Kain Belacu Halus',
+        'product_image' => 'assets/images/products/bima-swarga.webp', // Sesuaikan dengan path gambar produk RS di public/assets/images/products/
+        'order_type' => 'ready_stock',
+        'quantity' => 1,
+        'buyer_name' => 'I Made Wijaya',
+        'delivery_method' => 'courier',
+        'delivery_area' => 'Denpasar Barat, Bali',
+        'created_at' => '20 November 2026',
+        'agreed_estimate' => 'Siap Dikirim (Karya Ready Stock)',
+        'order_status' => 'processing',      // pending_confirmation | confirmed | processing | ready_for_handover | completed
+        'payment_status' => 'paid',          // unpaid | pending_verification | paid
+        'total_price' => 4500000,
+        'dp_amount' => 0,
+        'balance_amount' => 0,
+        'paid_at' => '21 Nov 2026 • 14:20 WITA',
+        'studio_status_title' => 'Tahap 3 dari 4: Inspeksi Kualitas & Pengemasan Karya',
+        'studio_status_desc' => 'Kurator studio sedang melakukan pengecekan akhir pigmen warna, kelengkapan Sertifikat Keaslian Kamasan, dan pengemasan tabung pelindung sebelum diserahkan ke ekspedisi.',
+        'steps' => [
+            [
+                'number' => 1,
+                'title' => 'Pengajuan Pesanan Ready Stock Diterima',
+                'description' => 'Formulir pemesanan 1 unit Lukisan Klasik Bima Swarga diterima studio. Kode pelacakan unik diterbitkan.',
+                'timestamp' => '20 Nov 2026 • 10:15 WITA',
+                'state' => 'completed',
+                'note' => null,
+            ],
+            [
+                'number' => 2,
+                'title' => 'Konfirmasi Stok & Pelunasan Penuh 100% (Tanpa DP)',
+                'description' => 'Transfer pembayaran penuh sebesar Rp 4.500.000 diverifikasi manual oleh admin studio (skema langsung lunas tanpa tahapan DP 50%).',
+                'timestamp' => '21 Nov 2026 • 14:20 WITA',
+                'state' => 'completed',
+                'note' => 'Pembayaran 100% Lunas terverifikasi & stok karya telah dikunci untuk pemesan.',
+            ],
+            [
+                'number' => 3,
+                'title' => 'Inspeksi Kualitas & Pengemasan Karya',
+                'description' => 'Pemeriksaan fisik karya oleh kurator studio, penyegelan sertifikat keaslian Kamasan Klungkung, dan pengemasan aman.',
+                'timestamp' => 'Est. Kirim: 23 Nov 2026',
+                'state' => 'active',
+                'note' => 'Dokumentasi foto karya sebelum dikemas dikirimkan melalui WhatsApp pemesan.',
+            ],
+            [
+                'number' => 4,
+                'title' => 'Penyerahan / Pengiriman Karya Selesai',
+                'description' => 'Karya diserahkan melalui Pengiriman Kurir / Ekspedisi menuju area tujuan.',
+                'timestamp' => null,
+                'state' => 'upcoming',
+                'note' => null,
+            ],
+        ],
+    ],
+
+    // CONTOH 2: PRE-ORDER (Bertahap DP 50% & Sisa Pelunasan 50%)
+    'KM-20261122-PO7741' => [
+        'tracking_code' => 'KM-20261122-PO7741',
+        'product_slug' => 'ider-ider',
+        'product_name' => 'Ider - Ider',
+        'product_category' => 'Upacara Adat',
+        'product_dimensions' => '320 x 180 cm • Kain Blacu Tebal & Prada Emas',
+        'product_image' => 'assets/images/products/ider-ider.webp', // Sesuaikan dengan path gambar produk PO di public/assets/images/products/
+        'order_type' => 'pre_order',
+        'quantity' => 1,
+        'buyer_name' => 'Mahardika',
+        'delivery_method' => 'studio_delivery',
+        'delivery_area' => 'Kawasan Sanur, Denpasar Selatan',
+        'created_at' => '28 Oktober 2026',
+        'agreed_estimate' => '45 Hari Kerja (Est. 15 Des 2026)',
+        'order_status' => 'processing',
+        'payment_status' => 'dp_verified',   // dp_unpaid | dp_pending_verification | dp_verified | balance_due | paid
+        'total_price' => 28500000,
+        'dp_amount' => 14250000,
+        'balance_amount' => 14250000,
+        'dp_verified_at' => '30 Okt 2026 • 14:35 WITA',
+        'paid_at' => null,
+        'studio_status_title' => 'Tahap 4 dari 6: Pengerjaan Mahakarya oleh Sangging',
+        'studio_status_desc' => 'Perajin Kamasan sedang menggoreskan narasi wayang menggunakan pigmen batu alami tradisional dan sentuhan prada emas.',
+        'steps' => [
+            [
+                'number' => 1,
+                'title' => 'Pengajuan & Konsultasi Spesifikasi',
+                'description' => 'Formulir pemesanan Pre-Order diterima studio. Kurator meneliti dimensi ruang plafon dan kecocokan ornamen klasik.',
+                'timestamp' => '28 Okt 2026 • 10:15 WITA',
+                'state' => 'completed',
+                'note' => null,
+            ],
+            [
+                'number' => 2,
+                'title' => 'Kesepakatan Harga Final & Estimasi via WhatsApp',
+                'description' => 'Diskusi ukuran 3.2m x 1.8m, bahan kain blacu tebal, dan kesepakatan nilai kontrak final Rp 28.500.000 disetujui kedua pihak.',
+                'timestamp' => '29 Okt 2026 • 16:00 WITA',
+                'state' => 'completed',
+                'note' => null,
+            ],
+            [
+                'number' => 3,
+                'title' => 'Verifikasi Pembayaran DP 50%',
+                'description' => 'Transfer DP Rp 14.250.000 diverifikasi manual oleh admin studio. Surat mandat pengerjaan diserahkan ke sangging.',
+                'timestamp' => '30 Okt 2026 • 14:35 WITA',
+                'state' => 'completed',
+                'note' => null,
+            ],
+            [
+                'number' => 4,
+                'title' => 'Pengerjaan Mahakarya oleh Sangging Kamasan',
+                'description' => 'Proses penggoresan narasi Ramayana & Sutasoma, pewarnaan pigmen mineral oker alami, serta penempelan prada emas asli.',
+                'timestamp' => 'Est. Selesai: 15 Des 2026',
+                'state' => 'active',
+                'note' => 'Dokumentasi progres berkala dikirim ke WhatsApp pemesan.',
+            ],
+            [
+                'number' => 5,
+                'title' => 'Pelunasan 50% (Sisa Pembayaran)',
+                'description' => 'Ditagihkan sesudah karya selesai difoto secara menyeluruh dan dikonfirmasi sebelum penyerahan (Rp 14.250.000).',
+                'timestamp' => null,
+                'state' => 'upcoming',
+                'note' => null,
+            ],
+            [
+                'number' => 6,
+                'title' => 'Pengantaran & Pemasangan Langsung di Lokasi',
+                'description' => 'Pemasangan di lokasi oleh tim studio Kamasan, penandatanganan berita acara serah terima, dan penyerahan sertifikat keaslian karya.',
+                'timestamp' => null,
+                'state' => 'upcoming',
+                'note' => null,
+            ],
+        ],
+    ],
+];

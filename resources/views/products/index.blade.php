@@ -17,7 +17,7 @@
     @vite(['resources/css/products/kamasan-products.css'])
 </head>
 <body class="kamasan-body">
-    
+    @include('layouts.navbar')
     <main class="container py-5" style="max-width: 1280px;">
         <header class="text-center mx-auto mb-5" style="max-width: 720px;">
             <div class="kamasan-eyebrow text-uppercase mb-2">
