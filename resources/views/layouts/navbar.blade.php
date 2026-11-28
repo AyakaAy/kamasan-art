@@ -5,10 +5,10 @@
 <header id="kmNavbar" class="km-navbar {{ $isHome ? 'is-home' : 'is-solid' }}">
     <div class="km-navbar-inner">
         {{-- Identitas Brand (Tanpa Variabel Data) --}}
-        <a href="{{ route('home') }}" class="km-brand" aria-label="Beranda KAMASAN ART">
+        <a href="{{ route('home') }}" class="km-brand" aria-label="Beranda MADE KAMASAN">
             <span class="km-brand-ornament" aria-hidden="true">❖</span>
             <span class="km-brand-text">
-                <strong>KAMASAN ART</strong>
+                <strong>MADE KAMASAN</strong>
                 <small>SENI WAYANG KLASIK</small>
             </span>
         </a>
@@ -67,30 +67,29 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-    const navbar = document.getElementById('kmNavbar');
-    const toggleBtn = document.getElementById('kmNavToggle');
-    const navMenu = document.getElementById('kmNavMenu');
+    let lastScrollY = window.scrollY;
+    const navbar = document.querySelector('.km-navbar');
 
-    // Ubah background navbar transparan menjadi coklat gelap saat di-scroll
-    function handleScroll() {
-        if (!navbar) return;
-        if (window.scrollY > 30) {
+    if (!navbar) return;
+
+    window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+
+        // Tambah efek background solid saat mulai scroll
+        if (currentScrollY > 30) {
             navbar.classList.add('is-scrolled');
         } else {
             navbar.classList.remove('is-scrolled');
         }
-    }
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
+        // Animasi slide ke atas saat scroll ke bawah, muncul kembali saat scroll ke atas
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            navbar.classList.add('is-hidden');
+        } else {
+            navbar.classList.remove('is-hidden');
+        }
 
-    // Toggle buka/tutup menu pada layar mobile
-    if (toggleBtn && navMenu) {
-        toggleBtn.addEventListener('click', function () {
-            const isOpen = navMenu.classList.toggle('is-open');
-            toggleBtn.classList.toggle('is-open', isOpen);
-            toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        });
-    }
+        lastScrollY = currentScrollY;
+    }, { passive: true });
 });
 </script>

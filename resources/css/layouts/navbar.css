@@ -5,7 +5,14 @@
 .km-navbar {
     width: 100%;
     z-index: 1000;
-    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    /* Ditambahkan transform untuk animasi slide */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: translateY(0);
+}
+
+/* Tambahan: Animasi slide ke atas saat disembunyikan */
+.km-navbar.is-hidden {
+    transform: translateY(-100%);
 }
 
 /* Mode Halaman Beranda: Melayang transparan dengan gradasi halus di atas Hero */

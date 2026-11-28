@@ -1,4 +1,12 @@
 /* resources/css/pages/admin-login.css */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #171513;
+}
+
 :root {
     --ka-bg-dark: #171513;
     --ka-surface: #1f1c19;
