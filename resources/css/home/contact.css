@@ -1,0 +1,462 @@
+:root {
+    --bg-main: #14110f;
+    --bg-card: #1d1916;
+    --bg-card-inner: #26211d;
+    --gold-primary: #e5b869;
+    --gold-hover: #f0c982;
+    --gold-muted: rgba(229, 184, 105, 0.15);
+    --text-primary: #f5f2ed;
+    --text-secondary: #a89f96;
+    --border-subtle: rgba(229, 184, 105, 0.18);
+    --status-green: #68b684;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.km-contact-wrapper {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 72px 24px 96px;
+}
+
+/* Hero Header */
+.km-hero {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 48px;
+}
+
+.km-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--bg-card-inner);
+    border: 1px solid var(--border-subtle);
+    color: var(--gold-primary);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 999px;
+    margin-bottom: 20px;
+}
+
+.km-badge::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--gold-primary);
+}
+
+.km-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+}
+
+.km-hero h1 span {
+    color: var(--gold-primary);
+    font-style: italic;
+}
+
+.km-hero p {
+    color: var(--text-secondary);
+    font-size: 0.98rem;
+}
+
+.km-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 28px auto 0;
+    max-width: 240px;
+}
+
+.km-divider::before,
+.km-divider::after {
+    content: '';
+    height: 1px;
+    flex: 1;
+    background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+}
+
+.km-divider-diamond {
+    width: 7px;
+    height: 7px;
+    background-color: var(--gold-primary);
+    transform: rotate(45deg);
+}
+
+/* Saluran Utama Card */
+.km-cta-banner {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    padding: 36px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 72px;
+}
+
+.km-cta-content {
+    max-width: 600px;
+}
+
+.km-status-line {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.km-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--status-green);
+    box-shadow: 0 0 8px rgba(104, 182, 132, 0.6);
+}
+
+.km-cta-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.km-cta-content p {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+}
+
+.km-cta-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.km-btn-gold {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--gold-primary);
+    color: #14110f;
+    font-weight: 700;
+    font-size: 0.92rem;
+    padding: 14px 26px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.km-btn-gold:hover {
+    background-color: var(--gold-hover);
+    transform: translateY(-1px);
+}
+
+.km-direct-meta {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+.km-direct-meta a {
+    color: var(--gold-primary);
+    text-decoration: none;
+}
+
+.km-direct-meta a:hover {
+    text-decoration: underline;
+}
+
+/* Section Lokasi & Studio */
+.km-section-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 40px;
+}
+
+.km-eyebrow {
+    color: var(--gold-primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.km-section-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.km-section-header p {
+    color: var(--text-secondary);
+    font-size: 0.94rem;
+}
+
+.km-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.km-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/* Map Card */
+.km-map-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.km-map-visual {
+    position: relative;
+    height: 360px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.km-map-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.km-map-overlay {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    background: rgba(20, 17, 15, 0.92);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.km-map-pin-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.km-pin-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: var(--gold-muted);
+    color: var(--gold-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.km-map-pin-info h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.km-map-pin-info span {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.km-btn-map {
+    background-color: var(--gold-primary);
+    color: #14110f;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+}
+
+.km-btn-map:hover {
+    background-color: var(--gold-hover);
+}
+
+.km-studio-profile-box {
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    border-top: 1px solid var(--border-subtle);
+    flex: 1;
+}
+
+.km-profile-item h5 {
+    color: var(--gold-primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.km-profile-item p {
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+/* Right Column Stack */
+.km-side-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.km-info-card {
+    padding: 28px;
+}
+
+.km-card-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: var(--text-primary);
+}
+
+.km-card-title svg {
+    color: var(--gold-primary);
+}
+
+.km-schedule-row {
+    background-color: var(--bg-card-inner);
+    border-radius: 10px;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.86rem;
+    margin-bottom: 10px;
+}
+
+.km-schedule-row span:first-child {
+    color: var(--text-secondary);
+}
+
+.km-schedule-row span:last-child {
+    color: var(--gold-primary);
+    font-weight: 600;
+}
+
+.km-note {
+    font-size: 0.78rem;
+    font-style: italic;
+    color: var(--text-secondary);
+    margin-top: 12px;
+}
+
+.km-address-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+    color: var(--text-primary);
+}
+
+.km-address-text {
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+    margin-bottom: 14px;
+}
+
+.km-contact-list {
+    list-style: none;
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.85rem;
+}
+
+.km-contact-list li {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-secondary);
+}
+
+.km-contact-list a,
+.km-contact-list strong {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.km-contact-list a:hover {
+    color: var(--gold-primary);
+}
+
+@media (max-width: 900px) {
+    .km-cta-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 28px;
+    }
+    .km-cta-actions {
+        width: 100%;
+        align-items: stretch;
+    }
+    .km-grid {
+        grid-template-columns: 1fr;
+    }
+    .km-studio-profile-box {
+        grid-template-columns: 1fr;
+    }
+}
